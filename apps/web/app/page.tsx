@@ -1,19 +1,32 @@
-import { Button } from "@workspace/ui/components/button"
+import { Card } from "@workspace/ui/components/card"
+import { Separator } from "@workspace/ui/components/separator"
 
-export default function Page() {
+import { TopNav } from "@/components/top-nav"
+import { Sidebar } from "@/components/sidebar"
+import { TopSellers } from "@/components/top-sellers"
+import { TopArticles } from "@/components/top-articles"
+import { LatestSection } from "@/components/latest-section"
+
+export default function Home() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="flex min-h-screen flex-col bg-muted/40">
+      <TopNav />
+
+      <main className="mx-auto flex w-full max-w-[1440px] flex-1 items-start gap-6 px-8 py-8">
+        <Sidebar />
+
+        <div className="flex flex-1 flex-col gap-6">
+          <Card className="rounded-2xl p-6">
+            <TopSellers />
+            <Separator className="my-6" />
+            <TopArticles />
+          </Card>
+
+          <Card className="rounded-2xl p-6">
+            <LatestSection />
+          </Card>
         </div>
-        <div className="text-muted-foreground font-mono text-xs">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </main>
     </div>
   )
 }
