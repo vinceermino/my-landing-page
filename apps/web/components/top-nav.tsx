@@ -15,7 +15,7 @@ export function TopNav() {
 
   return (
     <header className="bg-primary text-primary-foreground">
-      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-6">
+      <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-4">
         <span className="text-lg font-bold">mine-a-dope-shop.</span>
 
         <nav className="flex items-center gap-8">

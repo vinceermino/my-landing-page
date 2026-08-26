@@ -1,31 +1,30 @@
-import { Palette, MousePointerClick } from "lucide-react"
-
+import { FlaskConical, Beaker, TestTube, Atom } from "lucide-react"
 import { SectionHeading } from "./section-heading"
 
 const ARTICLES = [
   {
     id: 1,
-    icon: Palette,
-    title: "How to design in a logo in 5 steps",
-    author: "Vince Ermino",
+    icon: FlaskConical,
+    title: "Top 5 Strategies for Selling Industrial Chemicals",
+    author: "Dr. Alan Reed",
   },
   {
     id: 2,
-    icon: MousePointerClick,
-    title: "The Importance of UX Design in Business",
-    author: "John Smith",
+    icon: Beaker,
+    title: "Understanding Chemical Distribution Channels",
+    author: "Maria Lopez",
   },
   {
     id: 3,
-    icon: Palette,
-    title: "How to design in a logo in 5 steps",
-    author: "Vince Ermino",
+    icon: TestTube,
+    title: "How to Market Specialty Chemicals Effectively",
+    author: "Chen Wei",
   },
   {
     id: 4,
-    icon: MousePointerClick,
-    title: "The Importance of UX Design in Business",
-    author: "John Smith",
+    icon: Atom,
+    title: "Safety and Compliance in Chemical Sales",
+    author: "Sarah Kim",
   },
 ]
 
