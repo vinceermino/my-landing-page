@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "mine-a-dope-shop",
-  description: "A shadcn/ui + Next.js storefront dashboard.",
+  title: "Planted — Indoor Plant Shop",
+  description:
+    "Discover and shop beautiful indoor plants, care guides, and more.",
 }
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

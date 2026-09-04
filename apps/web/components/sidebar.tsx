@@ -1,4 +1,4 @@
-import { Home, ShoppingCart, Tag, Star, Settings } from "lucide-react"
+import { Home, ShoppingCart, Layers, Heart, Settings } from "lucide-react"
 
 import { Card } from "@workspace/ui/components/card"
 import { cn } from "@workspace/ui/lib/utils"
@@ -6,8 +6,8 @@ import { cn } from "@workspace/ui/lib/utils"
 const NAV_ITEMS = [
   { label: "Home", icon: Home, active: true },
   { label: "Cart", icon: ShoppingCart, active: false },
-  { label: "Coupons", icon: Tag, active: false },
-  { label: "Favorite Items", icon: Star, active: false },
+  { label: "Collections", icon: Layers, active: false },
+  { label: "Wishlist", icon: Heart, active: false },
   { label: "Settings", icon: Settings, active: false },
 ]
 
@@ -33,7 +33,7 @@ export function Sidebar() {
       </nav>
 
       <div className="px-4 text-xs text-muted-foreground">
-        <p>mine-a-dope-shop © 2019</p>
+        <p>planted © 2025</p>
         <p>
           <a href="#" className="hover:text-primary">
             Privacy Policy

@@ -5,7 +5,7 @@ import {
   AvatarFallback,
 } from "@workspace/ui/components/avatar"
 
-const NAV_LINKS = ["Home", "About", "Works"]
+const NAV_LINKS = ["Home", "Shop", "Collections", "Care Guides"]
 
 export function TopNav() {
   // Replace this string with your actual local image path or remote URL
@@ -16,10 +16,10 @@ export function TopNav() {
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-4">
-        <span className="text-lg font-bold">mine-a-dope-shop.</span>
+        <span className="text-lg font-bold">planted.</span>
 
         <nav className="flex items-center gap-8">
-          <ul className="flex items-center gap-7 text-sm font-medium">
+          <ul className="hidden items-center gap-7 text-sm font-medium md:flex">
             {NAV_LINKS.map((link) => (
               <li key={link}>
                 <a href="#" className="text-lg hover:opacity-90">

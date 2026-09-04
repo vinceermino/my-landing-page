@@ -8,63 +8,63 @@ import {
 import { SectionHeading } from "./section-heading"
 
 const AVATAR_COLORS = [
-  "bg-stone-600",
-  "bg-zinc-300 text-zinc-700",
-  "bg-orange-300 text-orange-900",
-  "bg-slate-500",
-  "bg-stone-600",
-  "bg-zinc-800",
-  "bg-zinc-300 text-zinc-700",
-  "bg-stone-700",
+  "bg-emerald-700",
+  "bg-lime-200 text-lime-800",
+  "bg-teal-300 text-teal-900",
+  "bg-green-600",
+  "bg-emerald-800",
+  "bg-green-900",
+  "bg-lime-200 text-lime-800",
+  "bg-teal-700",
 ]
 
-const SELLERS = [
+const GROWERS = [
   {
     id: 0,
-    name: "John Smith",
-    orders: 154,
+    name: "Lily Chen",
+    plantsSold: 154,
     avatarUrl: "./seller1.jpg",
   },
   {
     id: 1,
-    name: "Emily Johnson",
-    orders: 98,
+    name: "Rosa Martinez",
+    plantsSold: 98,
     avatarUrl: "./seller2.jpg",
   },
   {
     id: 2,
-    name: "Michael Brown",
-    orders: 210,
+    name: "Fern Nakamura",
+    plantsSold: 210,
     avatarUrl: "./seller3.jpg",
   },
   {
     id: 3,
-    name: "Sophia Davis",
-    orders: 67,
+    name: "Ivy Johansson",
+    plantsSold: 67,
     avatarUrl: "./seller4.jpg",
   },
   {
     id: 4,
-    name: "James Wilson",
-    orders: 183,
+    name: "Jasmine Okafor",
+    plantsSold: 183,
     avatarUrl: "./seller5.jpg",
   },
   {
     id: 5,
-    name: "Olivia Martinez",
-    orders: 120,
+    name: "Sage Patel",
+    plantsSold: 120,
     avatarUrl: "./seller6.jpg",
   },
   {
     id: 6,
-    name: "William Anderson",
-    orders: 245,
+    name: "Basil Thompson",
+    plantsSold: 245,
     avatarUrl: "./seller7.jpg",
   },
   {
     id: 7,
-    name: "Isabella Taylor",
-    orders: 76,
+    name: "Hazel Kim",
+    plantsSold: 76,
     avatarUrl: "./seller8.jpg",
   },
 ]
@@ -80,20 +80,25 @@ export function TopSellers() {
           </button>
         }
       >
-        Top Sellers
+        Featured Growers
       </SectionHeading>
 
       <div className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4">
-        {SELLERS.map((seller, i) => (
-          <div key={seller.id} className="flex items-center gap-3">
+        {GROWERS.map((grower, i) => (
+          <div key={grower.id} className="flex items-center gap-3">
             <Avatar className="h-12 w-12">
-              <AvatarImage src={seller.avatarUrl} alt={seller.name} />
-              <AvatarFallback className={AVATAR_COLORS[i]}>JS</AvatarFallback>
+              <AvatarImage src={grower.avatarUrl} alt={grower.name} />
+              <AvatarFallback className={AVATAR_COLORS[i]}>
+                {grower.name
+                  .split(" ")
+                  .map((n) => n[0])
+                  .join("")}
+              </AvatarFallback>
             </Avatar>
             <div className="leading-tight">
-              <p className="text-sm font-semibold">{seller.name}</p>
+              <p className="text-sm font-semibold">{grower.name}</p>
               <p className="text-xs text-muted-foreground">
-                {seller.orders} orders
+                {grower.plantsSold} plants sold
               </p>
             </div>
           </div>
