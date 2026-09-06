@@ -93,7 +93,7 @@ export function LatestSection() {
 
             <div className="flex flex-col gap-1.5 p-4">
               <div className="flex items-center justify-between">
-                <p className="text-sm font-semibold leading-snug">
+                <p className="text-sm leading-snug font-semibold">
                   {item.title}
                 </p>
                 <p className="text-sm font-bold text-primary">{item.price}</p>

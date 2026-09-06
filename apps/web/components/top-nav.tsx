@@ -4,6 +4,7 @@ import {
   AvatarImage,
   AvatarFallback,
 } from "@workspace/ui/components/avatar"
+import Link from "next/link"
 
 const NAV_LINKS = ["Home", "Shop", "Collections", "Care Guides"]
 
@@ -16,7 +17,9 @@ export function TopNav() {
   return (
     <header className="bg-primary text-primary-foreground">
       <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 py-4">
-        <span className="text-lg font-bold">planted.</span>
+        <Link href="/" role="link" className="text-lg font-bold">
+          planted.
+        </Link>
 
         <nav className="flex items-center gap-8">
           <ul className="hidden items-center gap-7 text-sm font-medium md:flex">
